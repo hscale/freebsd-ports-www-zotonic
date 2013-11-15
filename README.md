@@ -23,8 +23,8 @@ The present port is able to fetch the sources (make fetch) and
 unpacks fine (make extract). 
 
 Next thing to roll into this port is the patch for FreeBSD 9
-to use the iconv from the ports that I posted to the Zotonic
-developers mailing list.
+to use the iconv from the ports. (See my post to the Zotonic 
+developer mailing list, what has to be done)
 
 Then I have to figure out how to install this.
 The bundeled rebar script seems to assume that the build
