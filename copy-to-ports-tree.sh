@@ -3,13 +3,17 @@
 # copy git repo contents to ports collection
 #
 
+# config
 PORT_NAME=zotonic
-PORT_DIR=/usr/ports/www/$PORT_NAME
+PORT_PARENT_DIR=/usr/ports/www
 
-echo "transfering $PORT_NAME to $PORT_DIR .."
+# go
+PORT_DIR=$PORT_PARENT_DIR/$PORT_NAME
+
+echo "transfering $PORT_NAME to $TARGET_DIR .."
 
 if [ -d $PORT_DIR ] ; then 
-    echo "directory $PORT_DIR already exists"
+    echo "directory $PORT_DIR already exists!"
     echo -e "continue and remove (y/n)? [n] \c "
     read answer
     if [ -z $answer ] ; then
@@ -20,15 +24,18 @@ if [ -d $PORT_DIR ] ; then
 	echo "exiting .."
 	exit 0
     fi
+
+    echo "remove files in $PORT_DIR .."
     rm -rfv $PORT_DIR
     remove=$?
     if [ $remove -ne 0 ] ; then 
 	echo "something went wrong, exiting .."
 	exit $remove
     fi
-fi 
-
-cp -rpv zotonic /usr/ports/www
+fi
+ 
+echo "copy files from $PORT_NAME to $PORT_PARENT_DIR .."
+cp -rpv $PORT_NAME $PORT_PARENT_DIR
 copy=$?
 if [ $copy -ne 0 ]; then
     echo "something went wrong, exiting .."
