@@ -10,7 +10,7 @@ PORT_PARENT_DIR=/usr/ports/www
 # go
 PORT_DIR=$PORT_PARENT_DIR/$PORT_NAME
 
-echo "transfering $PORT_NAME to $TARGET_DIR .."
+echo "transfering $PORT_NAME to $PORT_DIR .."
 
 if [ -d $PORT_DIR ] ; then 
     echo "directory $PORT_DIR already exists!"
