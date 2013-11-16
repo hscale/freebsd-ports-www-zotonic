@@ -4,7 +4,8 @@ freebsd-ports-www-zotonic
 FreeBSD port for Zotonic CMS
 
 
-Use:
+Use
+---
 
 Copy the zotonic directory into your ports tree at
 
@@ -15,12 +16,17 @@ Then try the usual commands there, like
   make install clean
 
 
-IMPORTANT NOTE: 
+Present State
+-------------
 
 THIS PORT IS NOT WORKING YET - WORK IS STILL IN PROGRESS
 
 The present port is able to fetch the sources (make fetch) and
 unpacks fine (make extract). 
+
+
+TODOs
+-----
 
 Next thing to roll into this port is the patch for FreeBSD 9
 to use the iconv from the ports. (See my post to the Zotonic 
