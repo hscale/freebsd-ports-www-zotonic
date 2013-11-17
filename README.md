@@ -42,9 +42,9 @@ and to enable the trust auth for the "zotonic" database user.
 
 The present port is able to 
 * fetch the sources (make fetch),
-* unpacks (make extract),
-* patches (make patch) and 
-* builds (make)
+* unpack (make extract),
+* patch (make patch) and 
+* build (make)
 
 
 ### What works not
