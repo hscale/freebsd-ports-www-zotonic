@@ -11,6 +11,12 @@ Copy the zotonic directory into your ports tree at
 
   /usr/ports/www/zotonic
 
+You might use the helper script
+
+  copy-to-ports-tree.sh
+
+for this.
+
 
 Present State
 -------------
@@ -42,11 +48,14 @@ Installation is not working yet (see TODO).
 So just try
 
   cd /usr/ports/www/zotonic
+
   make
+
 
 This builds zotonic in 
 
   /usr/ports/www/zotonic/work/zotonic
+
 
 You can play with this stuff by going to that directory and continue 
 with step 3 from
