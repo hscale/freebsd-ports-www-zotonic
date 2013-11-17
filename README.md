@@ -9,11 +9,11 @@ Usage
 
 Copy the zotonic directory into your ports tree at
 
-  /usr/ports/www/zotonic
+    /usr/ports/www/zotonic
 
 You might use the helper script
 
-  copy-to-ports-tree.sh
+    copy-to-ports-tree.sh
 
 for this.
 
@@ -23,6 +23,8 @@ Present State
 
 THIS PORT IS NOT WORKING YET - WORK IS STILL IN PROGRESS!
 
+
+### Prerequisites
 
 Before you build via the port, check the prerequisites at
 
@@ -36,25 +38,31 @@ You have to manually install the ports for
 and to enable the trust auth for the "zotonic" database user.
 
 
+### What works
+
 The present port is able to 
 * fetch the sources (make fetch),
 * unpacks (make extract),
 * patches (make patch) and 
 * builds (make)
 
+
+### What works not
+
 Installation is not working yet (see TODO).
 
 
+### Testing what works
+
 So just try
 
-  cd /usr/ports/www/zotonic
-
-  make
+    cd /usr/ports/www/zotonic
+    make
 
 
 This builds zotonic in 
 
-  /usr/ports/www/zotonic/work/zotonic
+    /usr/ports/www/zotonic/work/zotonic
 
 
 You can play with this stuff by going to that directory and continue 
@@ -72,4 +80,4 @@ The bundeled rebar script seems to assume that the build
 directory is equal to the installation directory, which is
 not the FreeBSD way, which wants installation under /usr/local
 
-See the TODOs in the Makefile for more open tasks.
+See the TODOs in zotonic/Makefile for more open tasks.
