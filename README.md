@@ -4,8 +4,8 @@ freebsd-ports-www-zotonic
 FreeBSD port for Zotonic CMS
 
 
-Use
----
+Usage
+-----
 
 Copy the zotonic directory into your ports tree at
 
@@ -26,6 +26,7 @@ You have to manually install the ports for
 * erlang
 * imagemagick
 * postgresql
+
 and to enable the trust auth for the "zotonic" database user.
 
 
