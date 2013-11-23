@@ -46,6 +46,8 @@ The present port is able to
 * patch (make patch) and 
 * build (make)
 
+It should work for FreeBSD 9 and FreeBSD 10
+
 
 ### What works not
 

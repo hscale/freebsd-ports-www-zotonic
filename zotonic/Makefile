@@ -20,12 +20,16 @@ RUN_DEPENDS=	erl:${PORTSDIR}/lang/erlang
 USES=		gmake iconv
 USE_ZIP=	yes
 WRKSRC=	${WRKDIR}/${PORTNAME}
-# TODO
-# check iconv handling on FreeBSD 10-CURRENT
 
 APPDIR=		${PREFIX}/lib/erlang/lib/${PORTNAME}-${PORTVERSION}
 
 .include <bsd.port.pre.mk>
+
+# FreeBSD 10 introduced native iconv support
+post-patch:
+.if empty(ICONV_LIB)
+	@$(REINPLACE_CMD) -e 's/freebsd/freebsdskip/' $(WRKSRC)/deps/eiconv/rebar.config
+.endif
 
 do-build:
 	@cd ${BUILD_WRKSRC}; \
