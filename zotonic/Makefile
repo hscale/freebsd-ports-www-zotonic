@@ -19,14 +19,13 @@ RUN_DEPENDS=	erl:${PORTSDIR}/lang/erlang
 
 USES=		gmake iconv
 USE_ZIP=	yes
-WRKSRC=	${WRKDIR}/${PORTNAME}
+WRKSRC=		${WRKDIR}/${PORTNAME}
 
 APPDIR=		${PREFIX}/lib/erlang/lib/${PORTNAME}-${PORTVERSION}
 
 .include <bsd.port.pre.mk>
 post-extract:
 	@${FIND} ${WRKSRC} -name .empty -delete
-
 
 post-patch:
 	@${FIND} ${WRKSRC} -name \*.orig -delete
