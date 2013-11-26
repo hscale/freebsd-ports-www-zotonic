@@ -24,6 +24,8 @@ WRKSRC=	${WRKDIR}/${PORTNAME}
 APPDIR=		${PREFIX}/lib/erlang/lib/${PORTNAME}-${PORTVERSION}
 
 .include <bsd.port.pre.mk>
+post-extract:
+	@${FIND} ${WRKSRC} -name .empty -delete
 
 # FreeBSD 10 introduced native iconv support
 post-patch:
