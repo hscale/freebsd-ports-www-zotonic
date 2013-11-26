@@ -27,10 +27,12 @@ APPDIR=		${PREFIX}/lib/erlang/lib/${PORTNAME}-${PORTVERSION}
 post-extract:
 	@${FIND} ${WRKSRC} -name .empty -delete
 
-# FreeBSD 10 introduced native iconv support
+
 post-patch:
+	@${FIND} ${WRKSRC} -name \*.orig -delete
+# FreeBSD 10 introduced native iconv support
 .if empty(ICONV_LIB)
-	@$(REINPLACE_CMD) -e 's/freebsd/freebsdskip/' $(WRKSRC)/deps/eiconv/rebar.config
+	@${REINPLACE_CMD} -e 's/freebsd/freebsdSKIP/' ${WRKSRC}/deps/eiconv/rebar.config
 .endif
 
 do-build:
